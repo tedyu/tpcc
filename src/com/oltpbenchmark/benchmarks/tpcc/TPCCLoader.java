@@ -132,7 +132,8 @@ public class TPCCLoader extends Loader<TPCCBenchmark> {
                 workConf.getShouldEnableForeignKeys()) {
               EnableForeignKeyConstraints(conn);
             }
-            if (workConf.getUseStoredProcedures()) {
+            if (workConf.getUseStoredProcedures() &&
+                workConf.getCreateSQLProcedures()) {
               CreateSqlProcedures(conn);
             }
         }

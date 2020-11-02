@@ -305,6 +305,7 @@ public class DBWorkload {
       }
       if (argsLine.hasOption("start-warehouse-id")) {
           wrkld.setShouldEnableForeignKeys(false);
+          wrkld.setCreateSQLProcedures(false);
       }
 
       if (xmlConfig.containsKey("batchSize")) {
